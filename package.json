@@ -10,7 +10,7 @@
     "dev": "concurrently \"npm run server\" \"npm run client\"",
     "build": "NPM_CONFIG_PRODUCTION=false npm i -f --prefix client && INLINE_RUNTIME_CHUNK=false npm run build --prefix client",
     "heroku-postbuild": "npm run build",
-    "test": "jest",
+    "test": "jest"
   },
   "author": "",
   "license": "ISC",

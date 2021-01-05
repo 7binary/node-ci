@@ -47,6 +47,7 @@ require('./routes/authRoutes')(app);
 require('./routes/blogRoutes')(app);
 
 if (['production', 'ci'].includes(process.env.NODE_ENV)) {
+  console.log('> STATIC')
   app.use(express.static('client/build'));
 
   const path = require('path');

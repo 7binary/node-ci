@@ -1,0 +1,39 @@
+{
+  "name": "server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "server": "nodemon index.js --ignore tests",
+    "client": "npm run start --prefix client",
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "build": "NPM_CONFIG_PRODUCTION=false npm install --prefix client && npm run build --prefix client",
+    "heroku-postbuild": "npm run build",
+    "test": "jest"
+  },
+  "author": "",
+  "license": "ISC",
+  "jest": {
+    "testEnvironment": "node",
+    "setupFilesAfterEnv": [
+      "./tests/helpers/setup.js"
+    ]
+  },
+  "dependencies": {
+    "concurrently": "^5.3.0",
+    "cookie-session": "^1.4.0",
+    "cors": "^2.8.5",
+    "express": "^4.15.3",
+    "helmet": "^4.3.1",
+    "jest": "^26.6.3",
+    "mongoose": "^5.11.9",
+    "nodemon": "^2.0.6",
+    "passport": "^0.3.2",
+    "passport-google-oauth20": "^2.0.0",
+    "path-parser": "^2.0.2",
+    "puppeteer": "^5.5.0",
+    "redis": "^3.0.2"
+  },
+  "devDependencies": {}
+}

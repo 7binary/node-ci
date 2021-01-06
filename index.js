@@ -45,9 +45,10 @@ app.use(passport.session());
 // routes
 require('./routes/authRoutes')(app);
 require('./routes/blogRoutes')(app);
+require('./routes/uploadRoutes')(app);
 
 if (['production', 'ci'].includes(process.env.NODE_ENV)) {
-  console.log('> STATIC')
+  console.log('> STATIC');
   app.use(express.static('client/build'));
 
   const path = require('path');

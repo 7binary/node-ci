@@ -21,6 +21,7 @@
     ]
   },
   "dependencies": {
+    "aws-sdk": "^2.822.0",
     "concurrently": "^5.3.0",
     "cookie-session": "^1.4.0",
     "cors": "^2.8.5",
@@ -33,7 +34,8 @@
     "passport-google-oauth20": "^2.0.0",
     "path-parser": "^2.0.2",
     "puppeteer": "^5.5.0",
-    "redis": "^3.0.2"
+    "redis": "^3.0.2",
+    "uuid": "^8.3.2"
   },
   "devDependencies": {}
 }
